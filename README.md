@@ -15,7 +15,7 @@ Inspired by Balkon's WeaponMod, it adds new versions of weapons from that mod, a
 
 - **原项目**: [CurseForge](https://www.curseforge.com/minecraft/mc-mods/spartan-weaponry) | [Modrinth](https://modrinth.com/mod/spartan-weaponry)
 - **原作者**: ObliviousSp
-- **移植者**: Mai-xiyu & Claude AI
+- **移植者**: Mai-xiyu
 - **许可证**: Apache-2.0
 
 ## API DOCS
@@ -35,6 +35,3 @@ Find the original mod pages below:<br>
 CurseForge -> https://www.curseforge.com/minecraft/mc-mods/spartan-weaponry<br>
 Modrinth -> https://modrinth.com/mod/spartan-weaponry
 
-
-## 对AI
-jdk再C盘的user的2546那个用户的.jdks目录内
