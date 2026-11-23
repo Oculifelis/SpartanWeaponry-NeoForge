@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.8] - 26.1.2
+
+- Changed to Minecraft 26.1.2 and NeoForge 26.1.2.122
+- Fixed players being disconnected when joining a world
+- Fixed the config screen crashing dedicated servers
+- Fixed cestus break particles showing a missing texture
+
+---
+
 ## [1.0.7] - 2026-03-17
 
 ### Fixed

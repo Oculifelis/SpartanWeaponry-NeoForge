@@ -1,3 +1,14 @@
+# Spartan Weaponry Unofficial for Minecraft 26.1.2
+
+This is an unofficial port of [Spartan Weaponry](https://www.curseforge.com/minecraft/mc-mods/spartan-weaponry) by
+ObliviousSpartan to Minecraft 26.1.2 on NeoForge 26.1.2.122. It is based on Mai-xiyu's NeoForge port
+([Mai-xiyu/SpartanWeaponry-NeoForge](https://github.com/Mai-xiyu/SpartanWeaponry-NeoForge), branch 26.1) and keeps the
+same mod id and content. Oculifelis made the 26.1.2 port. The code is under the Apache 2.0 licence (see LICENSE).
+
+Changes for 26.1.2 are listed in CHANGELOG.md. The notes below come from Mai-xiyu's port.
+
+---
+
 # Spartan Weaponry (1.21.1 NeoForge 非官方移植版)
 
 > **⚠️ 这是一个非官方的社区移植版本**

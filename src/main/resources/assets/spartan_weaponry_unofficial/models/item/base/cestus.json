@@ -1,7 +1,8 @@
 {
     "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
     "textures": {
-        "layer0": "spartan_weaponry_unofficial:items/cestus_model"
+        "layer0": "spartan_weaponry_unofficial:items/cestus_model",
+        "particle": "#layer0"
     },
     "elements": [
         {
