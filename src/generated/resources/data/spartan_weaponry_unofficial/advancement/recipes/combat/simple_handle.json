@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:simple_handle"
+        "recipes": "spartan_weaponry_unofficial:simple_handle"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

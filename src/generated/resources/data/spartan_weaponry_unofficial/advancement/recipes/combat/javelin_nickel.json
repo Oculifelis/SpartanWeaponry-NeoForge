@@ -29,7 +29,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:javelin_nickel"
+        "recipes": "spartan_weaponry_unofficial:javelin_nickel"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

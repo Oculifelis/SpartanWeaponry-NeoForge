@@ -21,7 +21,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:throwing_knife_golden"
+        "recipes": "spartan_weaponry_unofficial:throwing_knife_golden"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

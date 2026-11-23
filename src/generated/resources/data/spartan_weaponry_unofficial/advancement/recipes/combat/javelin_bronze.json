@@ -29,7 +29,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:javelin_bronze"
+        "recipes": "spartan_weaponry_unofficial:javelin_bronze"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

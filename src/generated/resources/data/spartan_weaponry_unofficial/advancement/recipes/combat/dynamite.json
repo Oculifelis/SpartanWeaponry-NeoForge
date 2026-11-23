@@ -21,7 +21,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:dynamite"
+        "recipes": "spartan_weaponry_unofficial:dynamite"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

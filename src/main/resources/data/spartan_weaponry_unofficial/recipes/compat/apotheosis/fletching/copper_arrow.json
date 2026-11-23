@@ -1,22 +1,25 @@
 {
   "type": "apotheosis:fletching",
-  "conditions": [
-    {
-      "modid": "apotheosis",
-      "type": "forge:mod_loaded"
-    },
-    {
-      "disabled": [
-        "arrows",
-        "copper_ammo"
-      ],
-      "type": "spartan_weaponry_unofficial:type_disabled"
-    },
-    {
-      "type": "apotheosis:module",
-      "module": "village"
-    }
-  ],
+  "condition": {
+    "type": "minecraft:all_of",
+    "terms": [
+      {
+        "modid": "apotheosis",
+        "type": "forge:mod_loaded"
+      },
+      {
+        "disabled": [
+          "arrows",
+          "copper_ammo"
+        ],
+        "type": "spartan_weaponry_unofficial:type_disabled"
+      },
+      {
+        "type": "apotheosis:module",
+        "module": "village"
+      }
+    ]
+  },
   "ingredients": [
     "#forge:ingots/copper",
     "#forge:rods/wooden",

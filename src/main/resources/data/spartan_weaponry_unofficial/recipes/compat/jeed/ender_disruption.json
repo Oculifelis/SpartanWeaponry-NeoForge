@@ -13,16 +13,19 @@
       "nbt": "{Oil:{Effect:\"spartan_weaponry_unofficial:ender_strong\"}}"
     }
   ],
-  "conditions": [
-    {
-      "disabled": [
-        "oil"
-      ],
-      "type": "spartan_weaponry_unofficial:type_disabled"
-    },
-    {
-      "modid": "jeed",
-      "type": "forge:mod_loaded"
-    }
-  ]
+  "condition": {
+    "type": "minecraft:all_of",
+    "terms": [
+      {
+        "disabled": [
+          "oil"
+        ],
+        "type": "spartan_weaponry_unofficial:type_disabled"
+      },
+      {
+        "modid": "jeed",
+        "type": "forge:mod_loaded"
+      }
+    ]
+  }
 }

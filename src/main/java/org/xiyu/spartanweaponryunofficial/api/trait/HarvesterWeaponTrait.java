@@ -51,7 +51,7 @@ public class HarvesterWeaponTrait extends WeaponTrait implements IActionTraitCal
                             applyCooldown.set(true);
                     });
             if (applyCooldown.get()) {
-                player.swing(contextIn.getHand(), true);
+                player.swing(contextIn.getHand(), net.minecraft.world.item.component.SwingAnimation.DEFAULT, true);
                 player.getCooldowns().addCooldown(contextIn.getItemInHand(), 10);
                 return InteractionResult.CONSUME;
             }

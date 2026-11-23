@@ -29,7 +29,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:tomahawk_silver"
+        "recipes": "spartan_weaponry_unofficial:tomahawk_silver"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -62,10 +62,9 @@ public class ModSpartanWeaponry {
         modBus.addListener(ModCapabilities::registerCapabilities);
         NeoForge.EVENT_BUS.addListener(MeleeBlockWeaponTrait::onBlockEvent);
         NeoForge.EVENT_BUS.addListener(ModCommands::registerCommands);
-        NeoForge.EVENT_BUS.addListener(ModOilRecipes::initOilRecipes);
 
         // Place Config registration here...
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.CONFIG_SPEC);
+        modContainer.registerConfig(ModConfig.Type.LOCAL, Config.CONFIG_SPEC);
         modContainer.registerConfig(ModConfig.Type.CLIENT, ClientConfig.CONFIG_SPEC);
 //        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ServerConfig.CONFIG_SPEC);
         // Register extension points

@@ -2,24 +2,12 @@ package org.xiyu.spartanweaponryunofficial.init;
 
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import org.xiyu.spartanweaponryunofficial.api.OilEffects;
 import org.xiyu.spartanweaponryunofficial.item.crafting.OilBrewingRecipe;
-import org.xiyu.spartanweaponryunofficial.item.crafting.PotionToOilBrewingRecipe;
 import org.xiyu.spartanweaponryunofficial.util.Config;
 
 public class ModOilRecipes {
-    public static OilBrewingRecipe oilRecipes = null;
-    public static PotionToOilBrewingRecipe potionToOilRecipes = null;
-
-    public static void initOilRecipes(RegisterBrewingRecipesEvent event) {
-        oilRecipes = new OilBrewingRecipe();
-        event.getBuilder().addRecipe(oilRecipes);
-
-        potionToOilRecipes = new PotionToOilBrewingRecipe();
-        event.getBuilder().addRecipe(potionToOilRecipes);
-    }
-
+    // Brewing recipes are data (recipe/oil_brewing.json, recipe/potion_to_oil.json); this table picks the oil each reagent makes.
     public static void loadOilMixes() {
         OilBrewingRecipe.clearMixes();
         if (Config.INSTANCE.disableOilRecipes.get())

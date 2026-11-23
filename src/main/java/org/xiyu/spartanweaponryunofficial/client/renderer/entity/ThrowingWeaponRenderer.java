@@ -52,7 +52,7 @@ public class ThrowingWeaponRenderer<T extends ThrowingWeaponEntity> extends Enti
 
         Vector3f nextRotateAxis = new Vector3f(1.0f, 1.0f, 0.0f);
         nextRotateAxis.normalize();
-        matrixStackIn.mulPose(new Quaternionf().setAngleAxis(Mth.PI, nextRotateAxis.x, nextRotateAxis.y, nextRotateAxis.z));
+        matrixStackIn.rotate(new Quaternionf().setAngleAxis(Mth.PI, nextRotateAxis.x, nextRotateAxis.y, nextRotateAxis.z));
         matrixStackIn.translate(-0.10d, -0.20d, 0.0d);
 
         if (state.hasWeapon) {
@@ -65,7 +65,7 @@ public class ThrowingWeaponRenderer<T extends ThrowingWeaponEntity> extends Enti
     protected void doRenderTransformations(SWThrowingWeaponRenderState state, PoseStack matrixStack) {
         float partialTicks = state.partialTick;
         matrixStack.scale(2.0f, 2.0f, 2.0f);
-        matrixStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, state.yRotO, state.yRot) - 90.0f));
-        matrixStack.mulPose(Axis.ZP.rotationDegrees(Mth.lerp(partialTicks, state.xRotO, state.xRot) - 45.0f));
+        matrixStack.rotate(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, state.yRotO, state.yRot) - 90.0f));
+        matrixStack.rotate(Axis.ZP.rotationDegrees(Mth.lerp(partialTicks, state.xRotO, state.xRot) - 45.0f));
     }
 }

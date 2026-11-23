@@ -3,8 +3,8 @@ package org.xiyu.spartanweaponryunofficial.advancement.criterion;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.advancements.triggers.Criterion;
-import net.minecraft.advancements.predicates.ContextAwarePredicate;
-import net.minecraft.advancements.predicates.entity.EntityPredicate;
+import net.minecraft.core.Holder;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.advancements.triggers.SimpleCriterionTrigger;
 import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
@@ -31,11 +31,11 @@ public class BrewOilTrigger extends SimpleCriterionTrigger<BrewOilTrigger.Trigge
         this.trigger(playerIn, (triggerInstance) -> triggerInstance.matches(oilEffectIn));
     }
 
-    public record TriggerInstance(Optional<ContextAwarePredicate> player, Optional<Identifier> oilEffect)
+    public record TriggerInstance(Optional<Holder<LootItemCondition>> player, Optional<Identifier> oilEffect)
             implements SimpleCriterionTrigger.SimpleInstance {
         public static final Codec<BrewOilTrigger.TriggerInstance> CODEC = RecordCodecBuilder.create(
                 instance -> instance.group(
-                        EntityPredicate.ADVANCEMENT_CODEC.optionalFieldOf("player").forGetter(BrewOilTrigger.TriggerInstance::player),
+                        LootItemCondition.CODEC.optionalFieldOf("player").forGetter(BrewOilTrigger.TriggerInstance::player),
                         Identifier.CODEC.optionalFieldOf("oil_effect").forGetter(BrewOilTrigger.TriggerInstance::oilEffect)
                 ).apply(instance, BrewOilTrigger.TriggerInstance::new)
         );

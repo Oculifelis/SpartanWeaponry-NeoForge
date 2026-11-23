@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:pole_from_leather"
+        "recipes": "spartan_weaponry_unofficial:pole_from_leather"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

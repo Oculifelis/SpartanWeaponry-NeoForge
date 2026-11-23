@@ -21,7 +21,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:boomerang_diamond"
+        "recipes": "spartan_weaponry_unofficial:boomerang_diamond"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

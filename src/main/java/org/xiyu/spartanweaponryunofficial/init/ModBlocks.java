@@ -12,7 +12,7 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks REGISTRY = DeferredRegister.createBlocks(ModSpartanWeaponry.ID);
 
     private static Block.Properties skullProps() {
-        return Block.Properties.of().strength(1.0f).pushReaction(PushReaction.DESTROY);
+        return Block.Properties.of().strength(1.0f).pushReaction(PushReaction.POPPED);
     }
 
     public static final DeferredHolder<Block, Block> BLAZE_HEAD = REGISTRY.registerBlock("blaze_head", props -> new ExtendedSkullBlock(ExtendedSkullBlock.Types.BLAZE, props), ModBlocks::skullProps);

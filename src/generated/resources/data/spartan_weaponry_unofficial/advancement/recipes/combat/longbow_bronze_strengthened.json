@@ -29,7 +29,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:longbow_bronze_strengthened"
+        "recipes": "spartan_weaponry_unofficial:longbow_bronze_strengthened"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

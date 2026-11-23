@@ -32,7 +32,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:diamond_arrow"
+        "recipes": "spartan_weaponry_unofficial:diamond_arrow"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

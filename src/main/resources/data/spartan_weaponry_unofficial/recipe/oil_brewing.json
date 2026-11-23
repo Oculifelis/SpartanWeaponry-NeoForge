@@ -1,0 +1,27 @@
+{
+  "type": "spartan_weaponry_unofficial:oil_brewing",
+  "input": {
+    "item": "spartan_weaponry_unofficial:weapon_oil"
+  },
+  "reagent": {
+    "item": [
+      "minecraft:glistering_melon_slice",
+      "minecraft:golden_apple",
+      "minecraft:magma_cream",
+      "minecraft:fire_charge",
+      "minecraft:packed_ice",
+      "minecraft:blue_ice",
+      "minecraft:fermented_spider_eye",
+      "minecraft:glowstone_dust",
+      "minecraft:sponge",
+      "minecraft:prismarine_crystals",
+      "minecraft:glow_ink_sac",
+      "minecraft:wither_rose",
+      "minecraft:wither_skeleton_skull",
+      "minecraft:bone"
+    ]
+  },
+  "output": {
+    "id": "spartan_weaponry_unofficial:weapon_oil"
+  }
+}

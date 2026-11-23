@@ -11,9 +11,7 @@ public final class InputHelper {
     private InputHelper() {}
 
     public static boolean isShiftDown() {
-        return InputConstants.isKeyDown(Minecraft.getInstance().getWindow(),
-                InputConstants.KEY_LSHIFT)
-                || InputConstants.isKeyDown(Minecraft.getInstance().getWindow(),
-                InputConstants.KEY_RSHIFT);
+        return InputConstants.isKeyDown(InputConstants.KEY_LSHIFT)
+                || InputConstants.isKeyDown(InputConstants.KEY_RSHIFT);
     }
 }

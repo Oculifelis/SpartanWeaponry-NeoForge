@@ -306,7 +306,7 @@ public class SwordBaseItem extends Item implements IWeaponTraitContainer<SwordBa
     }
 
     @Override
-    public <T extends LivingEntity> int damageItem(@NotNull ItemStack stack, int amount, T entity, @NotNull Consumer<Item> onBroken) {
+    public <T extends LivingEntity> int damageItem(@NotNull ItemStack stack, int amount, T entity, @NotNull Consumer<ItemStack> onBroken) {
         int damage = amount;
         for (WeaponTrait trait : this.traits) {
             if (trait.getGenericCallback().isPresent())

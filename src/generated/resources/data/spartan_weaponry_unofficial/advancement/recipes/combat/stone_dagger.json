@@ -21,7 +21,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:stone_dagger"
+        "recipes": "spartan_weaponry_unofficial:stone_dagger"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

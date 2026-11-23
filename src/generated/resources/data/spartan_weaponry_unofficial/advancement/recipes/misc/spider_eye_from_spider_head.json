@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:spider_eye_from_spider_head"
+        "recipes": "spartan_weaponry_unofficial:spider_eye_from_spider_head"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -1,5 +1,7 @@
 package org.xiyu.spartanweaponryunofficial.event;
 
+import net.minecraft.core.registries.Registries;
+
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
@@ -39,7 +41,7 @@ import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.entries.NestedLootTable;
-import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraft.world.level.storage.loot.providers.number.floats.ContextFloatProviders;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.Tags;
@@ -516,29 +518,29 @@ public class CommonEventHandler {
     @SubscribeEvent
     public static void onLootTableLoad(LootTableLoadEvent ev) {
         if (Config.INSTANCE.addIronWeaponsToVillageWeaponsmith.get() &&
-                ev.getName().equals(BuiltInLootTables.VILLAGE_WEAPONSMITH)) {
+                ev.getKey().equals(BuiltInLootTables.VILLAGE_WEAPONSMITH)) {
             Log.info("Adding Iron Weapons to the Village Weaponsmith Loot Table!");
-            ev.getTable().addPool(generateLootPool(ModLootTables.INJECT_VILLAGE_WEAPONSMITH));
+            ev.getTable().addPool(generateLootPool(ev, ModLootTables.INJECT_VILLAGE_WEAPONSMITH));
         } else if (Config.INSTANCE.addBowAndCrossbowLootToVillageFletcher.get() &&
-                ev.getName().equals(BuiltInLootTables.VILLAGE_FLETCHER)) {
+                ev.getKey().equals(BuiltInLootTables.VILLAGE_FLETCHER)) {
             Log.info("Adding Longbow and Heavy Crossbow related loot to the Village Fletcher Loot Table!");
-            ev.getTable().addPool(generateLootPool(ModLootTables.INJECT_VILLAGE_FLETCHER));
+            ev.getTable().addPool(generateLootPool(ev, ModLootTables.INJECT_VILLAGE_FLETCHER));
         } else if (Config.INSTANCE.addDiamondWeaponsToEndCity.get() &&
-                ev.getName().equals(BuiltInLootTables.END_CITY_TREASURE)) {
+                ev.getKey().equals(BuiltInLootTables.END_CITY_TREASURE)) {
             Log.info("Adding Diamond Weapons to the End City Treasure Loot Table!");
-            ev.getTable().addPool(generateLootPool(ModLootTables.INJECT_END_CITY_TREASURE));
+            ev.getTable().addPool(generateLootPool(ev, ModLootTables.INJECT_END_CITY_TREASURE));
         }
     }
 
-    private static LootPool generateLootPool(ResourceKey<LootTable> lootKey) {
-        return LootPool.lootPool().add(generateLootEntry(lootKey))
-                .setBonusRolls(UniformGenerator.between(0, 1))
+    private static LootPool generateLootPool(LootTableLoadEvent ev, ResourceKey<LootTable> lootKey) {
+        return LootPool.lootPool().add(generateLootEntry(ev, lootKey))
+                .setBonusRolls(ContextFloatProviders.between(0, 1))
                 .name(ModSpartanWeaponry.ID + "_inject")
                 .build();
     }
 
-    private static LootPoolEntryContainer.Builder<?> generateLootEntry(ResourceKey<LootTable> tableKey) {
-        return NestedLootTable.lootTableReference(tableKey).setWeight(1);
+    private static LootPoolEntryContainer.Builder<?> generateLootEntry(LootTableLoadEvent ev, ResourceKey<LootTable> tableKey) {
+        return NestedLootTable.lootTableReference(ev.getRegistries().lookupOrThrow(Registries.LOOT_TABLE).getOrThrow(tableKey)).setWeight(1);
     }
 
     // NOTE: Mob spawn weapons moved to ZombieMixin/AbstractSkeletonMixin

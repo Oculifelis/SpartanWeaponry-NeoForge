@@ -19,7 +19,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:tomahawk_tin"
+        "recipes": "spartan_weaponry_unofficial:tomahawk_tin"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

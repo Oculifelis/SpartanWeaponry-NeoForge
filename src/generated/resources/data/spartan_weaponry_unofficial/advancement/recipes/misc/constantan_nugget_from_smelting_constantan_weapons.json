@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:constantan_nugget_from_smelting_constantan_weapons"
+        "recipes": "spartan_weaponry_unofficial:constantan_nugget_from_smelting_constantan_weapons"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

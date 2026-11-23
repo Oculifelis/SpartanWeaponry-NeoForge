@@ -21,7 +21,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:iron_spear"
+        "recipes": "spartan_weaponry_unofficial:iron_spear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

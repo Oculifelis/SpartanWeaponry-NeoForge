@@ -1,5 +1,6 @@
 package org.xiyu.spartanweaponryunofficial.event;
 
+import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.datafixers.util.Either;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
@@ -17,7 +18,6 @@ import net.neoforged.neoforge.client.event.RenderTooltipEvent;
 import net.neoforged.neoforge.client.event.ScreenEvent;
 import net.neoforged.neoforge.client.gui.VanillaGuiLayers;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
-import org.lwjgl.glfw.GLFW;
 import org.xiyu.spartanweaponryunofficial.ModSpartanWeaponry;
 import org.xiyu.spartanweaponryunofficial.client.ClientHelper;
 import net.minecraft.client.gui.components.Button;
@@ -44,7 +44,7 @@ public class ClientEventHandler {
         if (mc.level == null || mc.gui.screen() != null || mc.isPaused())
             return;
 
-        if (ev.getButton() == KeyBinds.KEY_ACCESS_QUIVER.getKey().getValue() && ev.getAction() == GLFW.GLFW_PRESS) {
+        if (ev.getButton() == KeyBinds.KEY_ACCESS_QUIVER.getKey().getValue() && ev.getAction() == InputConstants.PRESS) {
             NetworkHandler.sendPacketToServer(new QuiverAccessPacket());
             //Log.info("Mouse: Attack pressed!");
         }
@@ -56,7 +56,7 @@ public class ClientEventHandler {
         if (mc.level == null || mc.gui.screen() != null || mc.isPaused())
             return;
 
-        if (ev.getKey() == KeyBinds.KEY_ACCESS_QUIVER.getKey().getValue() && ev.getAction() == GLFW.GLFW_PRESS) {
+        if (ev.getKey() == KeyBinds.KEY_ACCESS_QUIVER.getKey().getValue() && ev.getAction() == InputConstants.PRESS) {
             NetworkHandler.sendPacketToServer(new QuiverAccessPacket());
             //Log.info("Keyboard: Attack pressed!");
         }
@@ -111,7 +111,7 @@ public class ClientEventHandler {
 
             // Generate "Discord" Button (width: 80, height: 20, 10px padding from top right)
             Button discordButton = Button.builder(Component.literal("Discord"), button -> {
-                ConfirmLinkScreen.confirmLinkNow(event.getScreen(), "https://discord.com/invite/h88UDxwUHm");
+                ConfirmLinkScreen.confirmLinkNow(event.getScreen(), java.net.URI.create("https://discord.com/invite/h88UDxwUHm"));
             }).bounds(screenWidth - 80 - 10, 10, 80, 20).build();
 
             event.addListener(discordButton);

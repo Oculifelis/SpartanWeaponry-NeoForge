@@ -32,7 +32,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:netherite_bolt"
+        "recipes": "spartan_weaponry_unofficial:netherite_bolt"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

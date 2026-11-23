@@ -11,7 +11,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:wooden_club"
+        "recipes": "spartan_weaponry_unofficial:wooden_club"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

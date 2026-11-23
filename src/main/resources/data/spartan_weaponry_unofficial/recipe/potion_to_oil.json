@@ -1,0 +1,12 @@
+{
+  "type": "spartan_weaponry_unofficial:potion_to_oil_brewing",
+  "input": {
+    "item": "minecraft:potion"
+  },
+  "reagent": {
+    "item": "minecraft:slime_ball"
+  },
+  "output": {
+    "id": "spartan_weaponry_unofficial:weapon_oil"
+  }
+}

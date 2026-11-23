@@ -21,7 +21,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:quiver_compartment"
+        "recipes": "spartan_weaponry_unofficial:quiver_compartment"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

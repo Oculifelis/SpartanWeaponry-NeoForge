@@ -19,7 +19,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:longbow_tin_strengthened"
+        "recipes": "spartan_weaponry_unofficial:longbow_tin_strengthened"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

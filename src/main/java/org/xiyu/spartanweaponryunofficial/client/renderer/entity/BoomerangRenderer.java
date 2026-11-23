@@ -28,15 +28,15 @@ public class BoomerangRenderer extends ThrowingWeaponRenderer<BoomerangEntity> {
         float partTicks = rotationInAir == 0.0f ? 0.0f : state.partialTick;
 
         matrixStack.scale(2.0f, 2.0f, 2.0f);
-        matrixStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partTicks, state.yRotO, state.yRot) - 90.0f));
-        matrixStack.mulPose(Axis.ZP.rotationDegrees(Mth.lerp(partTicks, state.xRotO, state.xRot) - 135.0f));
+        matrixStack.rotate(Axis.YP.rotationDegrees(Mth.lerp(partTicks, state.yRotO, state.yRot) - 90.0f));
+        matrixStack.rotate(Axis.ZP.rotationDegrees(Mth.lerp(partTicks, state.xRotO, state.xRot) - 135.0f));
         Vector3f rotation = new Vector3f(1.0f, 1.0f, 0.0f);
         rotation.normalize();
-        matrixStack.mulPose(new Quaternionf().setAngleAxis(Mth.PI, rotation.x, rotation.y, rotation.z));            // NOTE: PI = 180 degrees
+        matrixStack.rotate(new Quaternionf().setAngleAxis(Mth.PI, rotation.x, rotation.y, rotation.z));            // NOTE: PI = 180 degrees
         rotation = new Vector3f(1.0f, -1.0f, 0.0f);
         rotation.normalize();
-        matrixStack.mulPose(new Quaternionf().setAngleAxis(Mth.PI / 2.0f, rotation.x, rotation.y, rotation.z));        // NOTE: PI / 2 = 90 degrees
-        matrixStack.mulPose(Axis.ZP.rotationDegrees(rotationInAir));
+        matrixStack.rotate(new Quaternionf().setAngleAxis(Mth.PI / 2.0f, rotation.x, rotation.y, rotation.z));        // NOTE: PI / 2 = 90 degrees
+        matrixStack.rotate(Axis.ZP.rotationDegrees(rotationInAir));
         matrixStack.translate(0.075f, 0.25f, 0.0f);
     }
 }

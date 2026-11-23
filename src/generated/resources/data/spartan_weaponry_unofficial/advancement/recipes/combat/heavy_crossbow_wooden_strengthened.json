@@ -11,7 +11,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:heavy_crossbow_wooden_strengthened"
+        "recipes": "spartan_weaponry_unofficial:heavy_crossbow_wooden_strengthened"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

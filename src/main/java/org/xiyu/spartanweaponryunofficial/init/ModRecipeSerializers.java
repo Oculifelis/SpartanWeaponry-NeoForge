@@ -19,6 +19,9 @@ public class ModRecipeSerializers {
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<QuiverUpgradeRecipe>> QUIVER_UPGRADE_SMITHING = REGISTRY.register("quiver_upgrade_smithing", () -> new RecipeSerializer<>(QuiverUpgradeRecipe.CODEC, QuiverUpgradeRecipe.STREAM_CODEC));
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<ApplyOilRecipe>> APPLY_OIL = REGISTRY.register("apply_oil", () -> new RecipeSerializer<>(ApplyOilRecipe.CODEC, ApplyOilRecipe.STREAM_CODEC));
 
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<OilBrewingRecipe>> OIL_BREWING = REGISTRY.register("oil_brewing", () -> new RecipeSerializer<>(OilBrewingRecipe.CODEC, OilBrewingRecipe.STREAM_CODEC));
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<PotionToOilBrewingRecipe>> POTION_TO_OIL_BREWING = REGISTRY.register("potion_to_oil_brewing", () -> new RecipeSerializer<>(PotionToOilBrewingRecipe.CODEC, PotionToOilBrewingRecipe.STREAM_CODEC));
+
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<TagSmeltingRecipe>> TAGGED_SMELTING = REGISTRY.register("tag_smelting", () -> TagCookingRecipeSerializer.create(TagSmeltingRecipe::new, 200));
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<TagBlastingRecipe>> TAGGED_BLASTING = REGISTRY.register("tag_blasting", () -> TagCookingRecipeSerializer.create(TagBlastingRecipe::new, 100));
     public static final DeferredHolder<MapCodec<? extends ICondition>, MapCodec<TypeDisabledCondition>> TYPE_DISABLED_CONDITION = CONDITION_SERIALIZERS.register("type_disabled", () -> TypeDisabledCondition.CODEC);

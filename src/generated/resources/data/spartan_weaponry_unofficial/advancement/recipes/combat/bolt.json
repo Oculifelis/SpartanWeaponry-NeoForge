@@ -31,7 +31,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:bolt"
+        "recipes": "spartan_weaponry_unofficial:bolt"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

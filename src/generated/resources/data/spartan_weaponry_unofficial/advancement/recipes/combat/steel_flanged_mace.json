@@ -29,7 +29,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:steel_flanged_mace"
+        "recipes": "spartan_weaponry_unofficial:steel_flanged_mace"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

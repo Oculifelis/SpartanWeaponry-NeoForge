@@ -75,7 +75,7 @@ public class WeaponArchetype implements IReloadable {
     private static final Set<ItemAbility> BATTLEAXE_ACTIONS = createBattleaxeActions();
 
     private static Set<ItemAbility> createBattleaxeActions() {
-        Set<ItemAbility> actions = new HashSet<>(ItemAbilities.DEFAULT_AXE_ACTIONS);
+        Set<ItemAbility> actions = new HashSet<>();
         actions.add(ItemAbilities.SWORD_SWEEP);
         return ImmutableSet.copyOf(actions);
     }

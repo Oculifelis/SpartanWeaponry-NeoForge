@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:steel_nugget_from_blasting_steel_weapons"
+        "recipes": "spartan_weaponry_unofficial:steel_nugget_from_blasting_steel_weapons"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

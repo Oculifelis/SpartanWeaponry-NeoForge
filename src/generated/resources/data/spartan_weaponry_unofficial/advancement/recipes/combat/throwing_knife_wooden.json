@@ -11,7 +11,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:throwing_knife_wooden"
+        "recipes": "spartan_weaponry_unofficial:throwing_knife_wooden"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

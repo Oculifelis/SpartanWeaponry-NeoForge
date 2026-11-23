@@ -26,18 +26,18 @@ public class DecapitateLootModifier extends LootModifier {
 
     private final Item skull;
 
-    public DecapitateLootModifier(LootItemCondition[] conditionsIn, Item skullItem) {
+    public DecapitateLootModifier(java.util.Optional<net.minecraft.core.Holder<LootItemCondition>> conditionsIn, Item skullItem) {
         this(conditionsIn, IGlobalLootModifier.DEFAULT_PRIORITY, skullItem);
     }
 
-    public DecapitateLootModifier(LootItemCondition[] conditionsIn, int priority, Item skullItem) {
+    public DecapitateLootModifier(java.util.Optional<net.minecraft.core.Holder<LootItemCondition>> conditionsIn, int priority, Item skullItem) {
         super(conditionsIn, priority);
         this.skull = skullItem;
     }
 
     @Override
     protected @NotNull ObjectArrayList<ItemStack> doApply(@NotNull ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-        Entity killer = context.getOptionalParameter(LootContextParams.ATTACKING_ENTITY);
+        Entity killer = context.getOptional(LootContextParams.ATTACKING_ENTITY);
         if (killer == null)
             return generatedLoot;
         if (killer instanceof LivingEntity living) {
@@ -49,7 +49,7 @@ public class DecapitateLootModifier extends LootModifier {
 
                 if (container.hasWeaponTraitWithType(WeaponTraits.TYPE_DECAPITATE)) {
                     ItemStack skullStack = new ItemStack(this.skull);
-                    Entity thisEntity = context.getOptionalParameter(LootContextParams.THIS_ENTITY);
+                    Entity thisEntity = context.getOptional(LootContextParams.THIS_ENTITY);
                     if (thisEntity instanceof Player player) {
                         // Add the player NBT data to the skull ItemStack
                         ItemStackDataHelper.updateTag(skullStack, tag -> tag.putString("SkullOwner", player.getName().getString()));

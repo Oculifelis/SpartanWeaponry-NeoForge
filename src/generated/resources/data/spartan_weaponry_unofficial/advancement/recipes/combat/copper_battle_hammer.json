@@ -29,7 +29,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:copper_battle_hammer"
+        "recipes": "spartan_weaponry_unofficial:copper_battle_hammer"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

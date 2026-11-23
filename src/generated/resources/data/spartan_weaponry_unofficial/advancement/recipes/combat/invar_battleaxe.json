@@ -29,7 +29,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:invar_battleaxe"
+        "recipes": "spartan_weaponry_unofficial:invar_battleaxe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

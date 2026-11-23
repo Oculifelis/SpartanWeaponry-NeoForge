@@ -310,7 +310,7 @@ public class HeavyCrossbowItem extends CrossbowItem implements IReloadable, IHud
     }
 
     @Override
-    public <T extends LivingEntity> int damageItem(@NotNull ItemStack stack, int amount, T entity, @NotNull Consumer<Item> onBroken) {
+    public <T extends LivingEntity> int damageItem(@NotNull ItemStack stack, int amount, T entity, @NotNull Consumer<ItemStack> onBroken) {
         int damage = amount;
         for (WeaponTrait trait : this.rangedTraits) {
             if (trait.getGenericCallback().isPresent())

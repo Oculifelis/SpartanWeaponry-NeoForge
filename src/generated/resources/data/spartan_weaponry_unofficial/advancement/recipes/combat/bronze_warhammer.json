@@ -29,7 +29,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spartan_weaponry_unofficial:bronze_warhammer"
+        "recipes": "spartan_weaponry_unofficial:bronze_warhammer"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
