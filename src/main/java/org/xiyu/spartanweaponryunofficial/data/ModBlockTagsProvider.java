@@ -17,11 +17,14 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider p_256380_) {
-        this.tag(ModBlockTags.GRASS).add(Blocks.SHORT_GRASS, Blocks.SEAGRASS, Blocks.FERN);
+        this.vtag(ModBlockTags.GRASS).add(Blocks.SHORT_GRASS, Blocks.SEAGRASS, Blocks.FERN);
     }
 
     @Override
     public @NotNull String getName() {
         return ModSpartanWeaponry.NAME + " Block Tags";
+    }
+    private ValueTagAppender<net.minecraft.world.level.block.Block> vtag(net.minecraft.tags.TagKey<net.minecraft.world.level.block.Block> key) {
+        return new ValueTagAppender<>(this.tag(key), value -> net.minecraft.core.registries.BuiltInRegistries.BLOCK.getResourceKey(value).orElseThrow());
     }
 }

@@ -21,7 +21,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 // REMOVED: VillagerProfession and ItemListing (trade system now data-driven in MC 26.1)
-// import net.minecraft.world.entity.npc.VillagerProfession;
+// import net.minecraft.world.entity.npc.villager.VillagerProfession;
 // import net.minecraft.world.entity.npc.VillagerTrades.ItemListing;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -180,7 +180,7 @@ public class CommonEventHandler {
 
                     if (trueSourceEntity instanceof LivingEntity) {
                         LivingEntity living = (LivingEntity) source.getEntity();
-                        living.knockback(0.3F, player.getX() - living.getX(), player.getZ() - living.getZ());
+                        living.knockback(0.3F, player.getX() - living.getX(), player.getZ() - living.getZ(), source, 0.0f);
                     }
                     damageItem = true;
                 }

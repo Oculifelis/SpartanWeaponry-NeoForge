@@ -327,7 +327,7 @@ public class WeaponTrait {
                 this.initTooltipTypes();
             else
                 tooltip.add(this.types);
-            if (I18n.exists(String.format("tooltip.%s.trait.%s.desc", this.modId, this.type))) {
+            if (net.minecraft.locale.Language.getInstance().has(String.format("tooltip.%s.trait.%s.desc", this.modId, this.type))) {
                 if (invalidReason == InvalidReason.NONE)
                     this.addTooltipDescription(stack, tooltip);
                 else

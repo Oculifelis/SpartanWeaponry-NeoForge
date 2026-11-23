@@ -236,7 +236,7 @@ public class ThrowingWeaponEntity extends AbstractArrow implements IEntityWithCo
             }
         }
 
-        boolean isEnderman = entity.getType() == EntityType.ENDERMAN;
+        boolean isEnderman = entity.getType() == net.minecraft.world.entity.EntityTypes.ENDERMAN;
         if (this.isOnFire() && !isEnderman) {
             entity.igniteForSeconds(5.0F);
         }

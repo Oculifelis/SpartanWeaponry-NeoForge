@@ -48,7 +48,7 @@ public class BoomerangEntity extends ThrowingWeaponEntity {
     protected boolean affectedByWaterDrag = true;
 
     protected int caughtItems = 0;
-    protected static final Predicate<Entity> ITEMS_AND_XP = EntitySelector.NO_SPECTATORS.and((entity) -> entity.getType() == EntityType.EXPERIENCE_ORB || entity instanceof ItemEntity);
+    protected static final Predicate<Entity> ITEMS_AND_XP = EntitySelector.NO_SPECTATORS.and((entity) -> entity.getType() == net.minecraft.world.entity.EntityTypes.EXPERIENCE_ORB || entity instanceof ItemEntity);
 
     public BoomerangEntity(EntityType<? extends ThrowingWeaponEntity> type, Level level) {
         super(type, level);

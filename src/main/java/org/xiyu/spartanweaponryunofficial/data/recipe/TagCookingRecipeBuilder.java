@@ -1,7 +1,7 @@
 package org.xiyu.spartanweaponryunofficial.data.recipe;
 
 import com.google.common.collect.ImmutableMap;
-import net.minecraft.advancements.Criterion;
+import net.minecraft.advancements.triggers.Criterion;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.Identifier;

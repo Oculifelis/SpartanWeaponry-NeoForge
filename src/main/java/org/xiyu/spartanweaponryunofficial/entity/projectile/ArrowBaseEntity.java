@@ -111,7 +111,7 @@ public class ArrowBaseEntity extends AbstractArrow implements IEntityWithComplex
             // Roll a chance to spawn lightning under the right circumstances
             if (this.random.nextInt(4) < 1)    // ~25%
             {
-                LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(level, EntitySpawnReason.EVENT);
+                LightningBolt lightning = net.minecraft.world.entity.EntityTypes.LIGHTNING_BOLT.create(level, EntitySpawnReason.EVENT);
                 assert lightning != null;
                 lightning.setPos(Vec3.atBottomCenterOf(living.blockPosition()));
                 lightning.setCause(living instanceof ServerPlayer ? (ServerPlayer) living : null);

@@ -41,7 +41,7 @@ public class ClientEventHandler {
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
     public static void onMouseEvent(InputEvent.MouseButton.Post ev) {
         Minecraft mc = Minecraft.getInstance();
-        if (mc.level == null || mc.screen != null || mc.isPaused())
+        if (mc.level == null || mc.gui.screen() != null || mc.isPaused())
             return;
 
         if (ev.getButton() == KeyBinds.KEY_ACCESS_QUIVER.getKey().getValue() && ev.getAction() == GLFW.GLFW_PRESS) {
@@ -53,7 +53,7 @@ public class ClientEventHandler {
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
     public static void onKeyEvent(InputEvent.Key ev) {
         Minecraft mc = Minecraft.getInstance();
-        if (mc.level == null || mc.screen != null || mc.isPaused())
+        if (mc.level == null || mc.gui.screen() != null || mc.isPaused())
             return;
 
         if (ev.getKey() == KeyBinds.KEY_ACCESS_QUIVER.getKey().getValue() && ev.getAction() == GLFW.GLFW_PRESS) {

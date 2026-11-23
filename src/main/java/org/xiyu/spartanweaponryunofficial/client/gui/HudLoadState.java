@@ -18,7 +18,7 @@ public class HudLoadState {
         Minecraft mc = Minecraft.getInstance();
         float partialTicks = deltaTracker.getGameTimeDeltaPartialTick(true);
 
-        if (!mc.options.hideGui) {
+        if (!mc.gui.hud.isHidden()) {
             LocalPlayer player = mc.player;
             int loadSlot = -1;
             ItemStack loadStack = ItemStack.EMPTY;

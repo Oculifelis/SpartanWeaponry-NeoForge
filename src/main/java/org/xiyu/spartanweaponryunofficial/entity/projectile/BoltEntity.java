@@ -1,6 +1,6 @@
 package org.xiyu.spartanweaponryunofficial.entity.projectile;
 
-import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.advancements.triggers.CriteriaTriggers;
 import net.minecraft.core.Holder;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.particles.ColorParticleOption;
@@ -138,7 +138,7 @@ public class BoltEntity extends AbstractArrow implements IEntityWithComplexSpawn
                 ((LivingEntity) shooter).setLastHurtMob(entity);
         }
 
-        boolean isEnderman = entity.getType() == EntityType.ENDERMAN;
+        boolean isEnderman = entity.getType() == net.minecraft.world.entity.EntityTypes.ENDERMAN;
         int fireTimer = entity.getRemainingFireTicks();
         if (this.isOnFire() && !isEnderman)
             entity.igniteForSeconds(5.0F);
@@ -201,7 +201,7 @@ public class BoltEntity extends AbstractArrow implements IEntityWithComplexSpawn
         if (level.isThundering() && arrowItem == ModItems.COPPER_BOLT.get() || arrowItem == ModItems.TIPPED_COPPER_BOLT.get()) {
             // Roll a chance to spawn lightning under the right circumstances
             if (this.random.nextInt(4) < 1) {// ~25%
-                LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(level, EntitySpawnReason.EVENT);
+                LightningBolt lightning = net.minecraft.world.entity.EntityTypes.LIGHTNING_BOLT.create(level, EntitySpawnReason.EVENT);
                 assert lightning != null;
                 lightning.setPos(Vec3.atBottomCenterOf(living.blockPosition()));
                 lightning.setCause(living instanceof ServerPlayer ? (ServerPlayer) living : null);

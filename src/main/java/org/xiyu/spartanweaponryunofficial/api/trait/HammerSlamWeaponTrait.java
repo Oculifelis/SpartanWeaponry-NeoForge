@@ -45,7 +45,7 @@ public class HammerSlamWeaponTrait extends WeaponTrait implements IActionTraitCa
                 if (entity != player && !player.isAlliedTo(entity) && (!(entity instanceof ArmorStand) || ((ArmorStand) entity).isMarker())) {
                     float yRot = entity.getYRot();
                     final float halfPi = (float) Math.PI / 180.0f;
-                    entity.knockback(1.0f, Mth.sin(yRot * halfPi), -Mth.cos(yRot * halfPi));
+                    entity.knockback(1.0f, Mth.sin(yRot * halfPi), -Mth.cos(yRot * halfPi), player.damageSources().playerAttack(player), 0.0f);
                     entity.hurt(player.damageSources().playerAttack(player), (float) (player.getAttributeValue(Attributes.ATTACK_DAMAGE) / 2.0d));
                     EquipmentSlot slot = contextIn.getHand() == InteractionHand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
                     weapon.hurtAndBreak(1, (ServerLevel) level, player, (item) -> player.onEquippedItemBroken(item, slot));
